@@ -16,8 +16,15 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var podcastRouter = require('./routes/podcasts');
 
+// mongoose.connect(
+//   process.env.MONGO_DB,
+//   { useNewUrlParser: true, useUnifiedTopology: true },
+//   (err) => {
+//     console.log(err ? err : 'Connected to database');
+//   }
+// );
 mongoose.connect(
-  process.env.MONGO_DB,
+  'mongodb+srv://abhi:abhi1234@cluster0.u6ogw.mongodb.net/podcast?retryWrites=true&w=majority',
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err) => {
     console.log(err ? err : 'Connected to database');
